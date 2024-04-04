@@ -1,0 +1,466 @@
+Analysis & Synthesis report for TAREA3
+Wed Jan 18 14:12:27 2023
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |TOP_total_control_de_riesgos
+ 12. Parameter Settings for User Entity Instance: REGISTERS:REGISTERS_inst
+ 13. Port Connectivity Checks: "hazard_detection_unit:hazard_detection_unit_inst"
+ 14. Port Connectivity Checks: "CONTROL:CONTROL_inst"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jan 18 14:12:27 2023       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; TAREA3                                      ;
+; Top-level Entity Name              ; TOP_total_control_de_riesgos                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 3,835                                       ;
+;     Total combinational functions  ; 2,738                                       ;
+;     Dedicated logic registers      ; 1,521                                       ;
+; Total registers                    ; 1521                                        ;
+; Total pins                         ; 196                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                  ;
++----------------------------------------------------------------------------+------------------------------+--------------------+
+; Option                                                                     ; Setting                      ; Default Value      ;
++----------------------------------------------------------------------------+------------------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7                ;                    ;
+; Top-level entity name                                                      ; TOP_total_control_de_riesgos ; TAREA3             ;
+; Family name                                                                ; Cyclone IV E                 ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                          ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                           ; On                 ;
+; Enable compact report table                                                ; Off                          ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                         ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                          ; Off                ;
+; Preserve fewer node names                                                  ; On                           ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable                       ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001                 ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993                    ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                         ; Auto               ;
+; Safe State Machine                                                         ; Off                          ; Off                ;
+; Extract Verilog State Machines                                             ; On                           ; On                 ;
+; Extract VHDL State Machines                                                ; On                           ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                          ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                         ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                          ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                           ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                           ; On                 ;
+; Parallel Synthesis                                                         ; On                           ; On                 ;
+; DSP Block Balancing                                                        ; Auto                         ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                           ; On                 ;
+; Power-Up Don't Care                                                        ; On                           ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                          ; Off                ;
+; Remove Duplicate Registers                                                 ; On                           ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                          ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                          ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                          ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                          ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                          ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                           ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                          ; Off                ;
+; Optimization Technique                                                     ; Balanced                     ; Balanced           ;
+; Carry Chain Length                                                         ; 70                           ; 70                 ;
+; Auto Carry Chains                                                          ; On                           ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                           ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                          ; Off                ;
+; Auto ROM Replacement                                                       ; On                           ; On                 ;
+; Auto RAM Replacement                                                       ; On                           ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                           ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                         ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                         ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                           ; On                 ;
+; Strict RAM Replacement                                                     ; Off                          ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                           ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                          ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                           ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                          ; Off                ;
+; Auto Resource Sharing                                                      ; Off                          ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                          ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                          ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                          ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                           ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                          ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                           ; On                 ;
+; Report Parameter Settings                                                  ; On                           ; On                 ;
+; Report Source Assignments                                                  ; On                           ; On                 ;
+; Report Connectivity Checks                                                 ; On                           ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                          ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                            ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation           ; Normal compilation ;
+; HDL message level                                                          ; Level2                       ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                          ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                         ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                         ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                          ; 100                ;
+; Clock MUX Protection                                                       ; On                           ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                          ; Off                ;
+; Block Design Naming                                                        ; Auto                         ; Auto               ;
+; SDC constraint protection                                                  ; Off                          ; Off                ;
+; Synthesis Effort                                                           ; Auto                         ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                           ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                          ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium                       ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                         ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                           ; On                 ;
++----------------------------------------------------------------------------+------------------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/ALU.sv                          ;         ;
+; REGISTERS.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/REGISTERS.sv                    ;         ;
+; PC.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/PC.sv                           ;         ;
+; CONTROL.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/CONTROL.sv                      ;         ;
+; ALU_CONTROL.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/ALU_CONTROL.sv                  ;         ;
+; Imm_Gen.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/Imm_Gen.sv                      ;         ;
+; registers.list                   ; yes             ; User Unspecified File        ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/registers.list                  ;         ;
+; TOP_total_control_de_riesgos.sv  ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv ;         ;
+; check2.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check2.sv                       ;         ;
+; check1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check1.sv                       ;         ;
+; hazard_detection_unit.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/hazard_detection_unit.sv        ;         ;
+; forwarding_unit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/forwarding_unit.sv              ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 3,835     ;
+;                                             ;           ;
+; Total combinational functions               ; 2738      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1899      ;
+;     -- 3 input functions                    ; 772       ;
+;     -- <=2 input functions                  ; 67        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2585      ;
+;     -- arithmetic mode                      ; 153       ;
+;                                             ;           ;
+; Total registers                             ; 1521      ;
+;     -- Dedicated logic registers            ; 1521      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 196       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 1521      ;
+; Total fan-out                               ; 16310     ;
+; Average fan-out                             ; 3.51      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name                  ; Library Name ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+------------------------------+--------------+
+; |TOP_total_control_de_riesgos                         ; 2738 (2085)         ; 1521 (465)                ; 0           ; 0            ; 0       ; 0         ; 196  ; 0            ; |TOP_total_control_de_riesgos                                                              ; TOP_total_control_de_riesgos ; work         ;
+;    |ALU:ALU_inst|                                     ; 467 (467)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|ALU:ALU_inst                                                 ; ALU                          ; work         ;
+;    |ALU_CONTROL:ALU_CONTROL_inst|                     ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|ALU_CONTROL:ALU_CONTROL_inst                                 ; ALU_CONTROL                  ; work         ;
+;    |CONTROL:CONTROL_inst|                             ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|CONTROL:CONTROL_inst                                         ; CONTROL                      ; work         ;
+;    |Imm_Gen:Imm_Gen_inst|                             ; 66 (66)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|Imm_Gen:Imm_Gen_inst                                         ; Imm_Gen                      ; work         ;
+;    |PC:PC_inst|                                       ; 31 (31)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|PC:PC_inst                                                   ; PC                           ; work         ;
+;    |REGISTERS:REGISTERS_inst|                         ; 40 (40)             ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|REGISTERS:REGISTERS_inst                                     ; REGISTERS                    ; work         ;
+;    |forwarding_unit:forwarding_unit_inst|             ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|forwarding_unit:forwarding_unit_inst                         ; forwarding_unit              ; work         ;
+;    |hazard_detection_unit:hazard_detection_unit_inst| ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|hazard_detection_unit:hazard_detection_unit_inst             ; hazard_detection_unit        ; work         ;
+;       |rs1check:r1|                                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_total_control_de_riesgos|hazard_detection_unit:hazard_detection_unit_inst|rs1check:r1 ; rs1check                     ; work         ;
++-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                     ;
++----------------------------------------+-------------------------------+
+; Register name                          ; Reason for Removal            ;
++----------------------------------------+-------------------------------+
+; pc_intermedio_id[1]                    ; Merged with pc_out_id[1]      ;
+; pc_intermedio_id[0]                    ; Merged with pc_out_id[0]      ;
+; Rd_ex[3]                               ; Merged with instruction_ex[3] ;
+; Rd_ex[1]                               ; Merged with instruction_ex[1] ;
+; Rd_ex[0]                               ; Merged with instruction_ex[0] ;
+; MemtoReg_ex                            ; Merged with MemRead_ex        ;
+; Rd_ex[4]                               ; Merged with instruction_ex[4] ;
+; Rd_ex[2]                               ; Merged with instruction_ex[2] ;
+; instruction_wb[4]                      ; Merged with Rd_wb[4]          ;
+; instruction_wb[3]                      ; Merged with Rd_wb[3]          ;
+; instruction_wb[2]                      ; Merged with Rd_wb[2]          ;
+; instruction_wb[1]                      ; Merged with Rd_wb[1]          ;
+; instruction_wb[0]                      ; Merged with Rd_wb[0]          ;
+; instruction_mem[4]                     ; Merged with Rd_mem[4]         ;
+; instruction_mem[3]                     ; Merged with Rd_mem[3]         ;
+; instruction_mem[2]                     ; Merged with Rd_mem[2]         ;
+; instruction_mem[1]                     ; Merged with Rd_mem[1]         ;
+; instruction_mem[0]                     ; Merged with Rd_mem[0]         ;
+; Total Number of Removed Registers = 18 ;                               ;
++----------------------------------------+-------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1521  ;
+; Number of registers using Synchronous Clear  ; 100   ;
+; Number of registers using Synchronous Load   ; 46    ;
+; Number of registers using Asynchronous Clear ; 1521  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1184  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP_total_control_de_riesgos|PC:PC_inst|pc_salida[1]         ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_total_control_de_riesgos|PC:PC_inst|pc_salida[2]         ;
+; 3:1                ; 94 bits   ; 188 LEs       ; 94 LEs               ; 94 LEs                 ; Yes        ; |TOP_total_control_de_riesgos|pc_intermedio_ex[29]            ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |TOP_total_control_de_riesgos|read_data2_ex[9]                ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; Yes        ; |TOP_total_control_de_riesgos|read_data1_ex[8]                ;
+; 37:1               ; 8 bits    ; 192 LEs       ; 48 LEs               ; 144 LEs                ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[13]              ;
+; 37:1               ; 8 bits    ; 192 LEs       ; 48 LEs               ; 144 LEs                ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[16]              ;
+; 38:1               ; 4 bits    ; 100 LEs       ; 28 LEs               ; 72 LEs                 ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[7]               ;
+; 38:1               ; 4 bits    ; 100 LEs       ; 28 LEs               ; 72 LEs                 ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[24]              ;
+; 39:1               ; 2 bits    ; 52 LEs        ; 18 LEs               ; 34 LEs                 ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[2]               ;
+; 39:1               ; 2 bits    ; 52 LEs        ; 18 LEs               ; 34 LEs                 ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[28]              ;
+; 40:1               ; 2 bits    ; 52 LEs        ; 20 LEs               ; 32 LEs                 ; Yes        ; |TOP_total_control_de_riesgos|ALU_result_mem[31]              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |TOP_total_control_de_riesgos|Imm_Gen:Imm_Gen_inst|Selector6  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_total_control_de_riesgos|Imm_Gen:Imm_Gen_inst|Selector0  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TOP_total_control_de_riesgos|mux_ram[20]                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |TOP_total_control_de_riesgos|Imm_Gen:Imm_Gen_inst|Selector4  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TOP_total_control_de_riesgos|mux_alu2[10]                    ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |TOP_total_control_de_riesgos|Imm_Gen:Imm_Gen_inst|Selector18 ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |TOP_total_control_de_riesgos|Imm_Gen:Imm_Gen_inst|Selector20 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |TOP_total_control_de_riesgos ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; size           ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTERS:REGISTERS_inst ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; mem_depth      ; 32    ; Signed Integer                               ;
+; size           ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hazard_detection_unit:hazard_detection_unit_inst"                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; PCWrite ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CONTROL:CONTROL_inst"                                                                                                                                                                     ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; instruction ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; AuipcLui    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 196                         ;
+; cycloneiii_ff         ; 1521                        ;
+;     CLR               ; 282                         ;
+;     CLR SCLR          ; 9                           ;
+;     CLR SCLR SLD      ; 16                          ;
+;     CLR SLD           ; 30                          ;
+;     ENA CLR           ; 1109                        ;
+;     ENA CLR SCLR      ; 75                          ;
+; cycloneiii_lcell_comb ; 2738                        ;
+;     arith             ; 153                         ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 124                         ;
+;     normal            ; 2585                        ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 648                         ;
+;         4 data inputs ; 1899                        ;
+;                       ;                             ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 6.75                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Jan 18 14:12:13 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TAREA3 -c TAREA3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ram.sv
+    Info (12023): Found entity 1: RAM File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/RAM.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom.sv
+    Info (12023): Found entity 1: ROM File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/ROM.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file registers.sv
+    Info (12023): Found entity 1: REGISTERS File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/REGISTERS.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.sv
+    Info (12023): Found entity 1: PC File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/PC.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top_total.sv
+    Info (12023): Found entity 1: TOP_total File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control.sv
+    Info (12023): Found entity 1: CONTROL File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/CONTROL.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control.sv
+    Info (12023): Found entity 1: ALU_CONTROL File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/ALU_CONTROL.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file imm_gen.sv
+    Info (12023): Found entity 1: Imm_Gen File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/Imm_Gen.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top_total_seg.sv
+    Info (12023): Found entity 1: TOP_total_seg File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_seg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top_total_control_de_riesgos.sv
+    Info (12023): Found entity 1: TOP_total_control_de_riesgos File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file check2.sv
+    Info (12023): Found entity 1: check2 File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check2.sv Line: 3
+    Info (12023): Found entity 2: rs2check File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check2.sv Line: 10
+Info (12021): Found 2 design units, including 2 entities, in source file check1.sv
+    Info (12023): Found entity 1: check1 File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check1.sv Line: 3
+    Info (12023): Found entity 2: rs1check File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check1.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_detection_unit.sv
+    Info (12023): Found entity 1: hazard_detection_unit File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/hazard_detection_unit.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit.sv
+    Info (12023): Found entity 1: forwarding_unit File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/forwarding_unit.sv Line: 1
+Info (12127): Elaborating entity "TOP_total_control_de_riesgos" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at TOP_total_control_de_riesgos.sv(16): object "AuipcLui_ex" assigned a value but never read File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 16
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 31
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 42
+Info (12128): Elaborating entity "REGISTERS" for hierarchy "REGISTERS:REGISTERS_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 59
+Info (12128): Elaborating entity "ALU_CONTROL" for hierarchy "ALU_CONTROL:ALU_CONTROL_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 69
+Info (12128): Elaborating entity "CONTROL" for hierarchy "CONTROL:CONTROL_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 84
+Info (12128): Elaborating entity "Imm_Gen" for hierarchy "Imm_Gen:Imm_Gen_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 90
+Info (12128): Elaborating entity "hazard_detection_unit" for hierarchy "hazard_detection_unit:hazard_detection_unit_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 100
+Info (12128): Elaborating entity "rs2check" for hierarchy "hazard_detection_unit:hazard_detection_unit_inst|rs2check:r2" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/hazard_detection_unit.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at check2.sv(18): truncated value with size 5 to match size of target (1) File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check2.sv Line: 18
+Info (12128): Elaborating entity "check2" for hierarchy "hazard_detection_unit:hazard_detection_unit_inst|rs2check:r2|check2:c2" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check2.sv Line: 17
+Info (12128): Elaborating entity "rs1check" for hierarchy "hazard_detection_unit:hazard_detection_unit_inst|rs1check:r1" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/hazard_detection_unit.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at check1.sv(18): truncated value with size 5 to match size of target (1) File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check1.sv Line: 18
+Info (12128): Elaborating entity "check1" for hierarchy "hazard_detection_unit:hazard_detection_unit_inst|rs1check:r1|check1:c1" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/check1.sv Line: 17
+Info (12128): Elaborating entity "forwarding_unit" for hierarchy "forwarding_unit:forwarding_unit_inst" File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/TOP_total_control_de_riesgos.sv Line: 112
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register REGISTERS:REGISTERS_inst|mem[1][1] will power up to Low File: C:/Users/pablo/OneDrive/Escritorio/TAREA3/TAREA3/REGISTERS.sv Line: 21
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4064 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 66 input pins
+    Info (21059): Implemented 130 output pins
+    Info (21061): Implemented 3868 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Wed Jan 18 14:12:27 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:06
+
+

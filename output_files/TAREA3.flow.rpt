@@ -1,0 +1,143 @@
+Flow report for TAREA3
+Wed Jan 18 14:12:27 2023
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed Jan 18 14:12:27 2023       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; TAREA3                                      ;
+; Top-level Entity Name              ; TOP_total_control_de_riesgos                ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 3,835                                       ;
+;     Total combinational functions  ; 2,738                                       ;
+;     Dedicated logic registers      ; 1,521                                       ;
+; Total registers                    ; 1521                                        ;
+; Total pins                         ; 196                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/18/2023 14:12:14 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; TAREA3              ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                    ;
++--------------------------------------+----------------------------------------+---------------+------------------------------+----------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name                  ; Section Id           ;
++--------------------------------------+----------------------------------------+---------------+------------------------------+----------------------+
+; COMPILER_SIGNATURE_ID                ; 123260065868112.167404753421012        ; --            ; --                           ; --                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                           ; tb_singlecycle       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                           ; tb_multicycle        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --                           ; tb_multicycle_basico ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_multicycle_basico                   ; --            ; --                           ; eda_simulation       ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --                           ; eda_simulation       ;
+; EDA_SIMULATION_TOOL                  ; QuestaSim (SystemVerilog)              ; <None>        ; --                           ; --                   ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --                           ; eda_simulation       ;
+; EDA_TEST_BENCH_FILE                  ; tb_singlecycle.sv                      ; --            ; --                           ; tb_singlecycle       ;
+; EDA_TEST_BENCH_FILE                  ; ROM.sv                                 ; --            ; --                           ; tb_singlecycle       ;
+; EDA_TEST_BENCH_FILE                  ; RAM.sv                                 ; --            ; --                           ; tb_singlecycle       ;
+; EDA_TEST_BENCH_FILE                  ; tb_multicycle.sv                       ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_FILE                  ; top_duv.sv                             ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_FILE                  ; top_ideal.sv                           ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_FILE                  ; test_if.sv                             ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_FILE                  ; estimulos.sv                           ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_FILE                  ; TOP_total.sv                           ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_FILE                  ; tb_multicycle_basico.sv                ; --            ; --                           ; tb_multicycle_basico ;
+; EDA_TEST_BENCH_FILE                  ; ROM.sv                                 ; --            ; --                           ; tb_multicycle_basico ;
+; EDA_TEST_BENCH_FILE                  ; RAM.sv                                 ; --            ; --                           ; tb_multicycle_basico ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_singlecycle                         ; --            ; --                           ; tb_singlecycle       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_multicycle                          ; --            ; --                           ; tb_multicycle        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_multicycle_basico                   ; --            ; --                           ; tb_multicycle_basico ;
+; EDA_TEST_BENCH_NAME                  ; tb_singlecycle                         ; --            ; --                           ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; tb_multicycle                          ; --            ; --                           ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; tb_multicycle_basico                   ; --            ; --                           ; eda_simulation       ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --                           ; eda_simulation       ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --                           ; --                   ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --                           ; --                   ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --                           ; --                   ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; TOP_total_control_de_riesgos ; Top                  ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; TOP_total_control_de_riesgos ; Top                  ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; TOP_total_control_de_riesgos ; Top                  ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --                           ; --                   ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                           ; --                   ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --                           ; --                   ;
+; TOP_LEVEL_ENTITY                     ; TOP_total_control_de_riesgos           ; TAREA3        ; --                           ; --                   ;
++--------------------------------------+----------------------------------------+---------------+------------------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4841 MB             ; 00:00:05                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:05                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; PabloBayo        ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off TAREA3 -c TAREA3
+
+
+
